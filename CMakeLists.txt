@@ -157,5 +157,7 @@ add_library(directxtk STATIC
     ${COMPILED_SHADERS}
 )
 
+target_include_directories(directxtk PUBLIC "${CMAKE_CURRENT_LIST_DIR}/Inc")
+
 set_target_properties(directxtk PROPERTIES COMPILE_FLAGS "/Yupch.h")
 set_source_files_properties(Src/pch.cpp PROPERTIES COMPILE_FLAGS "/Ycpch.h")
